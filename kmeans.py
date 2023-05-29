@@ -6,7 +6,7 @@ from sklearn.cluster import KMeans
 from preprocessing import data
 
 
-kmeans = KMeans(n_clusters=3)
+kmeans = KMeans(n_clusters=50)
 kmeans.fit(data)
 kmeans_labels = kmeans.labels_
 

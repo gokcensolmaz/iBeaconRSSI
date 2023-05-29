@@ -15,33 +15,7 @@ data = pd.read_csv(path, index_col=None)
 
 loc = data.iloc[:, 0]
 loc.hist(figsize=(30, 20))
-# plt.show()
-'''
-# creating a mask for ibeacon values above -90 and ploting a bar graph against the locations of users
-for col in data.columns[2:]:
-    plt.figure(figsize=(7, 5))
-    mask = data[col] > -90
-    a = data.loc[mask, 'location'].value_counts()
-    plt.title("strength of beacon at particular location")
-    plt.xlabel("User Location")
-    plt.ylabel("Frequency")
-    a = a.plot(kind='bar')
-    a.grid()
-    plt.show()
 
-for col in data.columns[2:]:
-    data.hist(column=col)
-    plt.xlabel("Signal Strength")  # Set the custom label for the x-axis
-    plt.ylabel("Count")
-    # plt.show()
-'''
-'''values=data.iloc[:,2:]
-a=values.corr()
-fig=a.plot()
-fig.set_title('Correlation between beacons')
-fig.set_xlabel('Beacon')
-fig.set_ylabel('Correlation coefficient')
-plt.show()'''
 
 data_b = data.drop('location', axis=1)
 data_b = data_b.drop('date', axis=1)
