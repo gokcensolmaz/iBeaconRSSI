@@ -21,3 +21,4 @@ my_eclat = ECLAT(data=data, verbose=True)
 rule_indices, rule_supports = my_eclat.fit(min_support=min_support,
                                            min_combination=min_threshold,
                                            max_combination=max_length)
+print(rule_supports)
